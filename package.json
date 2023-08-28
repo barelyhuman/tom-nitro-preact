@@ -1,0 +1,27 @@
+{
+  "name": "nitro-prev",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "nitro build",
+    "dev": "nitro dev"
+  },
+  "dependencies": {
+    "postcss": "^8.4.28",
+    "preact": "^10.15.1",
+    "preact-render-to-string": "^6.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/plugin-transform-react-jsx": "^7.22.5",
+    "@barelyhuman/preact-island-plugins": "0.1.1-beta.8",
+    "@rollup/plugin-babel": "^6.0.3",
+    "autoprefixer": "^10.4.15",
+    "nitropack": "^2.6.2",
+    "rollup-plugin-scss": "3",
+    "sass": "^1.66.1",
+    "tslib": "^2.6.2"
+  }
+}

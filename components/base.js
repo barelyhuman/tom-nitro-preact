@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import "~/assets/style.scss";
 
-export default function Base({ children, activePath }) {
+export default function Base({ children }) {
   return (
     <html lang="en">
       <head>
@@ -11,7 +11,7 @@ export default function Base({ children, activePath }) {
       <body>
         <div class="noise" />
         <section class="bordered-section">{children}</section>
-        <Footer activePath={activePath} />
+        <Footer />
       </body>
     </html>
   );

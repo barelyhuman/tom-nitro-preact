@@ -1,15 +1,26 @@
-const getLinkStyle = (path, activePath) =>
-  path == activePath ? "link active" : "link";
+// @island
 
-export default function Footer({ activePath }) {
+const clientOnly = (fn, def) => {
+  if (typeof window !== "undefined") {
+    return fn();
+  }
+  return def;
+};
+
+const getLinkStyle = (path) => {
+  return clientOnly(() => {
+    return path == window.location.pathname ? "link active" : "link";
+  }, "link");
+};
+
+export default function Footer() {
   return (
     <>
-      <nav className="bottom-nav">
-        <a className={getLinkStyle("/", activePath)} href="/">
+      <nav class="bottom-nav">
+        <a class={getLinkStyle("/")} href="/">
           /home
         </a>
-        {/* <a className={getLinkStyle('/about')} href="/about">/about</a> */}
-        <a className={getLinkStyle("/projects", activePath)} href="/projects">
+        <a class={getLinkStyle("/projects")} href="/projects">
           /projects
         </a>
       </nav>

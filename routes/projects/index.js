@@ -4,7 +4,7 @@ import Projects from "~/components/pages/Projects";
 
 export default defineEventHandler(() => {
   return renderComponent(
-    <Base activePath={"/projects"}>
+    <Base>
       <Projects />
     </Base>
   );
